@@ -1,4 +1,31 @@
 {
+  "name": "attajak-hugo-netlify",
+  "version": "1.0.0",
+  "description": "Attajak Hugo Netlify",
+  "keywords": [
+    "attajak",
+    "hugo",
+    "netlify"
+  ],
+  "homepage": "https://github.com/attajak/attajak-hugo-netlify#readme",
+  "bugs": {
+    "url": "https://github.com/attajak/attajak-hugo-netlify/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attajak/attajak-hugo-netlify.git"
+  },
+  "license": "ISC",
+  "author": "attajak (https://github.com/attajak/)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "create": "hugo new",
+    "build": "hugo --gc --minify --logLevel info",
+    "start": "hugo server -D -E -F -M -N -O --disableFastRender --logLevel info --bind 0.0.0.0 -b http://localhost:1313/",
+    "test": "cypress",
+    "update:deps": "hugo mod get -u && hugo mod tidy && hugo mod graph && npm up && npm ls"
+  },
   "dependencies": {
     "cypress": "^14.2.0"
   }
