@@ -26,6 +26,9 @@
     "test": "cypress",
     "update:deps": "hugo mod get -u && hugo mod tidy && hugo mod graph && npm up && npm ls"
   },
+  "dependencies": {
+    "cypress"
+  },
   "devDependencies": {
     "netlify-plugin-cypress": "^2.2.1",
     "netlify-plugin-hugo-cache-resources": "^0.2.1"
