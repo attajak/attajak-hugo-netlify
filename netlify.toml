@@ -9,6 +9,12 @@
   HUGO_EXTENDED = "true"
   HUGO_ENV = "production"
   GO_VERSION = "1.24.1"
+  # cache Cypress binary in local "node_modules" folder
+  # so Netlify caches it
+  CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
+  # set TERM variable for terminal output
+  TERM = "xterm"
+  PUPPETEER_SKIP_DOWNLOAD = 1
 
 [[plugins]]
   package = "netlify-plugin-cypress"
@@ -18,6 +24,12 @@
 
   [plugins.inputs]
     enable = false
+
+[[plugins]]
+  package = "netlify-plugin-hugo-cache-resources"
+
+  [plugin.inputs]
+    debug = true
 
 [dev]
   command = "hugo server -D -E -F -M -N -O --disableFastRender --bind 0.0.0.0 -b http://localhost:1313 --logLevel info"
