@@ -20,9 +20,9 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "create": "hugo new",
-    "build": "hugo --gc --minify --logLevel info",
-    "start": "hugo server -D -E -F -M -N -O --disableFastRender --logLevel info --bind 0.0.0.0 -b http://localhost:1313/",
+    "create": "hugo new content",
+    "build": "HUGO_ENV=production hugo --gc --minify --logLevel info",
+    "server": "hugo server -D -E -F -M -N -O --disableFastRender --logLevel info --bind 0.0.0.0 -b http://localhost:1313/",
     "test": "cypress",
     "update:deps": "hugo mod get -u && hugo mod tidy && hugo mod graph && npm up && npm ls"
   },
