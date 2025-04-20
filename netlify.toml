@@ -14,7 +14,7 @@
   CYPRESS_CACHE_FOLDER = "./node_modules/CypressBinary"
   # set TERM variable for terminal output
   TERM = "xterm"
-  PUPPETEER_SKIP_DOWNLOAD = "1"
+  # PUPPETEER_SKIP_DOWNLOAD = "1"
 
 [[plugins]]
   package = "netlify-plugin-cypress"
