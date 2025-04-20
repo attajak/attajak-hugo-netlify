@@ -1,6 +1,7 @@
 # example netlify.toml
 [build]
-  command = "hugo --gc --minify --logLevel info"
+  # command = "hugo --gc --minify --logLevel info"
+  command = "npm i && npm run build"
   functions = "netlify/functions"
   publish = "public"
 
@@ -32,5 +33,6 @@
     debug = true
 
 [dev]
-  command = "hugo server -D -E -F -M -N -O --disableFastRender --bind 0.0.0.0 -b http://localhost:1313 --logLevel info"
+  # command = "hugo server -D -E -F -M -N -O --disableFastRender --bind 0.0.0.0 -b http://localhost:1313 --logLevel info"
+  command = "npm run dev"
   functions = "netlify/functions"
