@@ -13,7 +13,7 @@
 # website title
 title = "Attajak Hugo Netlify"
 # Hostname (and path) to the root
-baseURL = "http://localhost:1313"
+baseURL = "http://attajak-hugo-netlify.netlify.app"
 # theme list
 theme = "github.com/hugo-fixit/fixit-bundle"
 # theme = ["FixIt"] # enable in your site config file
@@ -25,8 +25,6 @@ languageCode = "en"
 languageName = "English"
 # whether to include Chinese/Japanese/Korean
 hasCJKLanguage = false
-# default amount of posts in each pages
-pagination.pageSize = 12
 # copyright description used only for seo schema
 copyright = "Attajak Janrak"
 # whether to use robots.txt
@@ -35,6 +33,10 @@ enableRobotsTXT = true
 enableGitInfo = true
 # whether to use emoji code
 enableEmoji = true
+# default amount of posts in each pages                 [pagination]                                              disableAliases = false
+  pagerSize = 10
+  path = "page"                                         # ignore some build errors
+ignoreLogs = [                                            "error-get-remote-image",                               "error-get-remote-json",                                "error-remote-getjson",                                 "error-missing-instagram-accesstoken"                 ]
 
 # -------------------------------------------------------------------------------------
 # Menu Configuration
@@ -1356,3 +1358,51 @@ enableEmoji = true
       [params.page.seo.publisher]
         name = ""
         logoUrl = ""
+
+  # FixIt bundle config
+  # cmpt-flyfish
+  [params.flyfish]
+    enable = true
+    light = "rgb(0 119 190 / 10%)"
+    dark = "rgb(255 255 255 / 10%)"
+
+  # Mobile Devtools config
+  [params.mDevtools]
+    enable = true
+    # "eruda", "vConsole" supported
+    type = "eruda"
+
+  # Auto translation configuration
+  # See: https://github.com/xnx3/translate/
+  [params.autoTranslate]
+    enable = false
+    # The translation service provider, ['client.edge', 'translate.service']
+    # See: https://translate.zvo.cn/43086.html
+    service = 'client.edge'
+    # List of language ID to translate to, e.g. ["english", "chinese_simplified", "chinese_traditional", ...]
+    # See the full language list: https://api.translate.zvo.cn/language.json
+    languages = []
+    # Element IDs that needs to be ignored for translation
+    ignoreID = []
+    # Class names that need to be ignored for translation
+    ignoreClass = []
+    # Tag names that need to be ignored for translation
+    ignoreTag = []
+    # Whether to detect the local language
+    # If your site itself is multilingual in Hugo, it is not recommended to enable this feature!
+    detectLocalLanguage = false
+    cdn = "" # translate.js CDN
+
+  # Content adapters config for component projects
+  [params.projectsAdapters]
+    enable = false
+    # Whether to show only public repos
+    onlyPublic = true
+    # Default categories and collections
+    categories = []
+    collections = []
+    # Ignore repos in the ignore list
+    ignoreList = []
+    [params.projectsAdapters.params]
+      hiddenFromHomePage = true
+      # more font matter here ...
