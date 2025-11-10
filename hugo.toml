@@ -111,7 +111,6 @@ ignoreLogs = [
     [menu.main.params]
       icon = "fa-solid fa-pen"
 
-
 # -------------------------------------------------------------------------------------
 # Related content Configuration
 # See: https://gohugo.io/content-management/related/
