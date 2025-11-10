@@ -38,8 +38,11 @@ enableEmoji = true
   pagerSize = 10
   path = "page"                                         # ignore some build errors
 ignoreLogs = [ 
-"error-get-remote-image", "error-get-remote-json", "error-remote-getjson", "error-missing-instagram-accesstoken"
-]
+  "error-get-remote-image",
+  "error-get-remote-json",
+  "error-remote-getjson",
+  "error-missing-instagram-accesstoken"
+  ]
 
 # -------------------------------------------------------------------------------------
 # Menu Configuration
