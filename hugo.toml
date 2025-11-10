@@ -33,10 +33,13 @@ enableRobotsTXT = true
 enableGitInfo = true
 # whether to use emoji code
 enableEmoji = true
-# default amount of posts in each pages                 [pagination]                                              disableAliases = false
+# default amount of posts in each pages
+[pagination]                                              disableAliases = false
   pagerSize = 10
   path = "page"                                         # ignore some build errors
-ignoreLogs = [                                            "error-get-remote-image",                               "error-get-remote-json",                                "error-remote-getjson",                                 "error-missing-instagram-accesstoken"                 ]
+ignoreLogs = [ 
+"error-get-remote-image", "error-get-remote-json", "error-remote-getjson", "error-missing-instagram-accesstoken"
+]
 
 # -------------------------------------------------------------------------------------
 # Menu Configuration
