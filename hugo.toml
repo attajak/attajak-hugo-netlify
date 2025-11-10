@@ -34,9 +34,11 @@ enableGitInfo = true
 # whether to use emoji code
 enableEmoji = true
 # default amount of posts in each pages
-[pagination]                                              disableAliases = false
+[pagination]
+  disableAliases = false
   pagerSize = 10
-  path = "page"                                         # ignore some build errors
+  path = "page"
+# ignore some build errors
 ignoreLogs = [ 
   "error-get-remote-image",
   "error-get-remote-json",
